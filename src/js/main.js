@@ -18,7 +18,7 @@ navToggler.addEventListener("click", () => {
     document.body.style.overflowY = "hidden";
     logo.setAttribute("src", "./src/assets/images/logo-bookmark-white.svg")
     nav.style.transform = "translateY(0)"
-    
+
   } else {
     nav.setAttribute("data-visible", "false")
     navToggler.setAttribute("aria-expanded", "false")
@@ -26,6 +26,6 @@ navToggler.addEventListener("click", () => {
     header.style.backgroundColor = "";
     navToggler.style.backgroundImage = "url('./src/assets/images/icon-hamburger.svg')"
     logo.setAttribute("src", "./src/assets/images/logo-bookmark.svg")
-    nav.style.transform = "translateY(200%)"
+    nav.style.transform = "translateY(-200%)"
   }
 })
