@@ -5,38 +5,69 @@
     <link rel="icon" type="image" href="/src/assets/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <!-- JS -->
+    <script src="./src/js/main.js" defer></script>
     <title>Bookmark Landing Page</title>
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header data-header class="relative z-50 flex justify-between px-8 py-10">
       <a href="#">
-        <img src="./src/assets/images/logo-bookmark.svg" alt="Bookmark">
+        <img
+          data-logo
+          src="./src/assets/images/logo-bookmark.svg"
+          alt="Bookmark"
+        />
       </a>
 
       <!-- Nav Toggler -->
-      <button aria-controls="nav" data-navToggler aria-expanded="false"></button>
+      <button
+        id="nav-toggler"
+        aria-controls="nav"
+        data-navToggler
+        aria-expanded="false"
+        class="h-[0.9375rem] w-[1.125rem] bg-[url('../assets/images/icon-hamburger.svg')]"
+      ></button>
 
       <!-- Navigation -->
-      <nav id="nav" data-visible="false">
-        <ul>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
+      <nav
+        id="nav"
+        data-nav
+        data-visible="false"
+        class="absolute inset-x-0 top-full flex h-screen -translate-y-[200%] flex-col items-center gap-6 bg-nt-dark-blue px-8 text-white"
+      >
+        <ul class="flex w-full flex-col text-center leading-none">
+          <li class="border-y-[1px] border-y-white/[0.2] py-6">
+            <a href="#">Features</a>
+          </li>
+          <li class="py-6"><a href="#">Pricing</a></li>
+          <li class="border-y-[1px] border-y-white/[0.2] py-6">
+            <a href="#">Contact</a>
+          </li>
         </ul>
 
-        <button>Login</button>
+        <button
+          class="w-full rounded-md border-2 border-white py-[0.9375rem] font-medium uppercase leading-none"
+        >
+          Login
+        </button>
 
-        <ul>
+        <ul class="flex items-center gap-6">
           <li>
             <a href="#">
-              <img src="./src/assets/images/icon-facebook.svg" alt="Facebook logo">
+              <img
+                src="./src/assets/images/icon-facebook.svg"
+                alt="Facebook logo"
+              />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="./src/assets/images/icon-twitter.svg" alt="Twitter logo">
+              <img
+                src="./src/assets/images/icon-twitter.svg"
+                alt="Twitter logo"
+              />
             </a>
           </li>
         </ul>
