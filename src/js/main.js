@@ -29,3 +29,32 @@ navToggler.addEventListener("click", () => {
     nav.style.transform = "translateY(-200%)"
   }
 })
+
+const tabs = document.querySelectorAll("[role='tab']");
+const tabpanels = document.querySelectorAll("[role='tabpanel']")
+
+let currentSelected = document.querySelector("li[aria-selected='true']");
+
+tabs.forEach((tab) => {
+  
+  tab.addEventListener("click", () => {
+    currentSelected = document.querySelector("li[aria-selected='true']")
+
+    if (tab === currentSelected) { return }
+
+    currentSelected.setAttribute("aria-selected", "false")
+    tab.setAttribute("aria-selected", "true")
+  })
+
+  tabpanels.forEach((tabpanel) => {
+    console.log(tabpanel);
+    const currentPanel = document.querySelector(`[aria-labelledby=${currentSelected.id}]`)
+  
+    if (tabpanel === currentPanel) {
+      tabpanel.setAttribute("hidden", "false")
+    } else {
+      tabpanel.setAttribute("hidden", "true")
+    }
+  })
+})
+
