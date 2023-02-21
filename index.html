@@ -77,18 +77,33 @@
     <main>
       <!-- Hero Section -->
       <section class="grid gap-14">
-        <div class="bg-[url(../assets/images/blob.svg)] bg-no-repeat bg-right-bottom">
-          <img src="./src/assets/images/illustration-hero.svg" alt="">
+        <div
+          class="bg-[url(../assets/images/blob.svg)] bg-right-bottom bg-no-repeat"
+        >
+          <img src="./src/assets/images/illustration-hero.svg" alt="" />
         </div>
 
-        <div class="text-center flex flex-col gap-7 px-8">
-          <h1 class="text-3xl text-nt-dark-blue font-medium">A Simple Bookmark Manager</h1>
-          <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+        <div class="flex flex-col gap-7 px-8 text-center pb-[9.625rem]">
+          <h1 class="text-3xl font-medium text-nt-dark-blue">
+            A Simple Bookmark Manager
+          </h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
 
-          <!-- TODO: Design the buttons -->
-          <div>
-            <button>Get it on Chrome</button>
-            <button>Get it on Firefox</button>
+          <div class="flex gap-3 leading-none">
+            <button
+              class="rounded-md bg-pr-soft-blue p-[1.125rem] text-sm font-medium text-white"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              class="rounded-md bg-nt-grayish-blue/[0.1] p-[1.125rem] text-sm font-medium text-nt-dark-blue shadow-md shadow-nt-grayish-blue"
+            >
+              Get it on Firefox
+            </button>
           </div>
         </div>
       </section>
