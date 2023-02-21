@@ -11,3 +11,14 @@
 [role="tab"][aria-selected="true"]{
   font-weight: 500;
 }
+
+[role="tab"][aria-selected="true"]::after {
+  content: "";
+  height: 4px;
+  width: 142px;
+  background-color: hsl(0, 94%, 66%);
+  position: absolute;
+  bottom: 0;
+  inset-inline: 50%;
+  transform: translateX(-50%);
+}
