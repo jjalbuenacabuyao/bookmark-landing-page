@@ -122,33 +122,42 @@
         </div>
 
         <ul role="tablist" class="px-8 leading-none">
-          <li class="py-5 w-full border-y-[1px] border-y-nt-grayish-blue/[0.5]">
+          <li class="w-full border-y-[1px] border-y-nt-grayish-blue/[0.5] py-5">
             <a href="#" role="tab" id="tab-1" aria-selected="true"
               >Simple Bookmarking</a
             >
           </li>
-          <li class="py-5 w-full">
+          <li class="w-full py-5">
             <a href="#" role="tab" id="tab-2" aria-selected="false"
               >Speedy Searching</a
             >
           </li>
-          <li class="py-5 w-full border-y-[1px] border-y-nt-grayish-blue/[0.5]">
+          <li class="w-full border-y-[1px] border-y-nt-grayish-blue/[0.5] py-5">
             <a href="#" role="tab" id="tab-3" aria-selected="true"
               >Easy Sharing</a
             >
           </li>
         </ul>
 
-        <div role="tabpanel" aria-labelledby="tab-1">
-          <div>
+        <div
+          role="tabpanel"
+          aria-labelledby="tab-1"
+          class="flex flex-col gap-[5.25rem] px-8"
+          hidden="false"
+        >
+          <div
+            class="relative after:absolute after:-bottom-10 after:left-0 after:-z-10 after:block after:h-[202px] after:w-[307px] after:content-[url(../assets/images/blob.svg)] after:rotate-180 after:-translate-x-8"
+          >
             <img
               src="./src/assets/images/illustration-features-tab-1.svg"
               alt=""
             />
           </div>
 
-          <div>
-            <h3>Bookmark in one click</h3>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-2xl font-medium leading-none text-nt-dark-blue">
+              Bookmark in one click
+            </h3>
             <p>
               Organize your bookmarks however you like. Our simple drag and drop
               interface gives you complete control over how you manage your
@@ -158,16 +167,23 @@
           </div>
         </div>
 
-        <div role="tabpanel" aria-labelledby="tab-2">
-          <div>
+        <div
+          role="tabpanel"
+          aria-labelledby="tab-2"
+          class="flex flex-col gap-[5.25rem] px-8"
+          hidden="true"
+        >
+          <div class="relative after:absolute after:-bottom-10 after:left-0 after:-z-10 after:block after:h-[202px] after:w-[307px] after:content-[url(../assets/images/blob.svg)] after:rotate-180 after:-translate-x-8">
             <img
               src="./src/assets/images/illustration-features-tab-2.svg"
               alt=""
             />
           </div>
 
-          <div>
-            <h3>Intelligent search</h3>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-2xl font-medium leading-none text-nt-dark-blue">
+              Intelligent search
+            </h3>
             <p>
               Our powerful search feature will help you find saved sites in no
               time at all. No need to trawl through all of your bookmarks.
@@ -176,16 +192,23 @@
           </div>
         </div>
 
-        <div role="tabpanel" aria-labelledby="tab-3">
-          <div>
+        <div
+          role="tabpanel"
+          aria-labelledby="tab-3"
+          class="flex flex-col gap-[5.25rem] px-8"
+          hidden="true"
+        >
+          <div class="relative after:absolute after:-bottom-10 after:left-0 after:-z-10 after:block after:h-[202px] after:w-[307px] after:content-[url(../assets/images/blob.svg)] after:rotate-180 after:-translate-x-8">
             <img
               src="./src/assets/images/illustration-features-tab-3.svg"
               alt=""
             />
           </div>
 
-          <div>
-            <h3>Share your bookmarks</h3>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-2xl font-medium leading-none text-nt-dark-blue">
+              Share your bookmarks
+            </h3>
             <p>
               Easily share your bookmarks and collections with others. Create a
               sharable link that you can send at the click of a button.
