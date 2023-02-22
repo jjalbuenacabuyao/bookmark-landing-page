@@ -22,3 +22,7 @@
   inset-inline: 50%;
   transform: translateX(-50%);
 }
+
+.more-button {
+  @apply hidden;
+}
