@@ -30,31 +30,27 @@ navToggler.addEventListener("click", () => {
   }
 })
 
-const tabs = document.querySelectorAll("[role='tab']");
+const tabs = document.querySelectorAll("[role='tab']")
 const tabpanels = document.querySelectorAll("[role='tabpanel']")
 
-let currentSelected = document.querySelector("li[aria-selected='true']");
 
 tabs.forEach((tab) => {
-  
-  tab.addEventListener("click", () => {
-    currentSelected = document.querySelector("li[aria-selected='true']")
+  tab.addEventListener("click", (e) => {
+    const activeTab = document.querySelector("[aria-selected='true']")
+    activeTab.setAttribute("aria-selected", "false");
+    e.target.setAttribute("aria-selected", "true");
 
-    if (tab === currentSelected) { return }
-
-    currentSelected.setAttribute("aria-selected", "false")
-    tab.setAttribute("aria-selected", "true")
-  })
-
-  tabpanels.forEach((tabpanel) => {
-    console.log(tabpanel);
-    const currentPanel = document.querySelector(`[aria-labelledby=${currentSelected.id}]`)
-  
-    if (tabpanel === currentPanel) {
-      tabpanel.setAttribute("hidden", "false")
-    } else {
-      tabpanel.setAttribute("hidden", "true")
-    }
+    tabpanels.forEach(panel => {
+      const activeTabId = document.querySelector("[aria-selected='true']").id
+      if (panel.getAttribute("aria-labelledby") === activeTabId) {
+        panel.setAttribute("hidden", "false")
+      } else {
+        panel.setAttribute("hidden", "true")
+      }
+      console.log(panel.getAttribute("aria-labelledby"));
+      console.log(activeTabId);
+    })
   })
 })
+
 
