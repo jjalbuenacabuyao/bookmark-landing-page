@@ -53,4 +53,36 @@ tabs.forEach((tab) => {
   })
 })
 
+const accordionTogglers = document.querySelectorAll("[data-accordion-toggler]")
+const accordionContents = document.querySelectorAll("[data-accordion-content]")
 
+accordionContents.forEach(accordionContent => {
+  accordionContent.style.display = "none";
+})
+
+accordionTogglers.forEach(accordionToggler => {
+  accordionToggler.addEventListener("click", () => {
+    const isExpanded = accordionToggler.getAttribute("aria-expanded")
+    const activeAccordionContent = document.querySelector(`#${accordionToggler.getAttribute("aria-controls")}`)
+
+    if (isExpanded === "false"){
+      accordionToggler.setAttribute("aria-expanded", "true")
+      const arrowIcon = document.querySelector("[data-accordion-toggler][aria-expanded='true'] svg")
+      const arrowIconPath = document.querySelector("[data-accordion-toggler][aria-expanded='true'] svg > path")
+      arrowIcon.style.transform = "rotate(180deg)";
+      arrowIconPath.setAttribute("stroke", "#fa5757")
+
+      activeAccordionContent.style.display = "block"
+    } 
+    
+    else {
+      accordionToggler.setAttribute("aria-expanded", "false")
+      const arrowIcon = document.querySelector("[data-accordion-toggler][aria-expanded='false'] svg")
+      const arrowIconPath = document.querySelector("[data-accordion-toggler][aria-expanded='false'] svg > path")
+      arrowIcon.style.transform = "rotate(0deg)";
+      arrowIconPath.setAttribute("stroke", "#5267DF")
+
+      activeAccordionContent.style.display = "none"
+    }
+  })
+})
