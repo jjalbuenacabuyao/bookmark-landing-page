@@ -4,11 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-[role="tabpanel"][hidden="true"]{
+[role="tabpanel"][hidden="true"] {
   display: none;
 }
 
-[role="tab"][aria-selected="true"]{
+[role="tab"][aria-selected="true"] {
   font-weight: 500;
 }
 
