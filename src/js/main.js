@@ -77,11 +77,14 @@ accordionTogglers.forEach(accordionToggler => {
     
     else {
       accordionToggler.setAttribute("aria-expanded", "false")
-      const arrowIcon = document.querySelector("[data-accordion-toggler][aria-expanded='false'] svg")
-      const arrowIconPath = document.querySelector("[data-accordion-toggler][aria-expanded='false'] svg > path")
-      arrowIcon.style.transform = "rotate(0deg)";
-      arrowIconPath.setAttribute("stroke", "#5267DF")
-
+      const arrowIcon = document.querySelectorAll("[data-accordion-toggler][aria-expanded='false'] svg")
+      const arrowIconPath = document.querySelectorAll("[data-accordion-toggler][aria-expanded='false'] svg > path")
+      arrowIcon.forEach(icon => {
+        icon.style.transform = "rotate(0deg)";
+      })
+      arrowIconPath.forEach(path => {
+        path.setAttribute("stroke", "#5267DF")
+      })
       activeAccordionContent.style.display = "none"
     }
   })
