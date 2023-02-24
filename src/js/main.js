@@ -73,6 +73,8 @@ accordionTogglers.forEach(accordionToggler => {
       arrowIconPath.setAttribute("stroke", "#fa5757")
 
       activeAccordionContent.style.display = "block"
+      activeAccordionContent.style.borderBottom = "solid 1px hsl(231 69% 60% / 0.3)"
+      accordionToggler.style.borderBottom = "none"
     } 
     
     else {
@@ -86,6 +88,7 @@ accordionTogglers.forEach(accordionToggler => {
         path.setAttribute("stroke", "#5267DF")
       })
       activeAccordionContent.style.display = "none"
+      accordionToggler.style.borderBottom = "solid 1px hsl(231 69% 60% / 0.3)"
     }
   })
 })
