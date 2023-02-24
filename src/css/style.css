@@ -26,3 +26,15 @@
 .more-button {
   @apply hidden;
 }
+
+.accordion {
+  @apply px-8;
+}
+
+.accordion button {
+  @apply flex w-full items-center justify-between pb-5 border-b-[1px] border-b-pr-soft-blue/[0.3];
+}
+
+.accordion [data-accordion-content]{
+  @apply pt-5 pb-8;
+}
