@@ -32,7 +32,7 @@
 }
 
 .accordion button {
-  @apply flex w-full items-center justify-between pb-5 border-b-[1px] border-b-pr-soft-blue/[0.3];
+  @apply flex w-full items-center justify-between pb-5 border-b-[1px] border-b-pr-soft-blue/[0.3] text-nt-dark-blue font-medium text-sm;
 }
 
 .accordion [data-accordion-content]{
