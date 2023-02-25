@@ -13,6 +13,9 @@ module.exports = {
       },
       fontFamily: {
         "rubik": ["Rubik", "sans-serif"],
+      },
+      padding: {
+        "32-170": "clamp(2rem, -1.037rem + 12.96vw, 10.625rem)",
       }
     },
   },
