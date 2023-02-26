@@ -19,6 +19,9 @@ module.exports = {
       },
       fontSize: {
         "16-18": "clamp(1rem, 0.96rem + 0.19vw, 1.125rem)",
+      },
+      translate: {
+        "32-170": "clamp(2rem, -1.037rem + 12.96vw, 10.625rem)",
       }
     },
   },
